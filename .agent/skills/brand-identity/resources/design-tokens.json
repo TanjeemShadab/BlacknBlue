@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "brand_name": "Black n Blue Events Logistics",
+    "description": "Premium dark-themed design tokens with Electric Blue accents for event logistics excellence.",
+    "last_updated": "2026-04-10",
+    "version": "1.0.0"
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#00BFFF",
+      "hover": "#009ACD",
+      "active": "#00688B",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#00001A",
+      "hover": "#000033",
+      "foreground": "#FFFFFF"
+    },
+    "background": "#000000",
+    "foreground": "#FFFFFF",
+    "muted": {
+      "DEFAULT": "#1A1A1A",
+      "foreground": "#A1A1AA"
+    },
+    "accent": {
+      "DEFAULT": "#00BFFF",
+      "foreground": "#FFFFFF"
+    },
+    "destructive": {
+      "DEFAULT": "#EF4444",
+      "foreground": "#FFFFFF"
+    },
+    "success": {
+      "DEFAULT": "#22C55E",
+      "foreground": "#FFFFFF"
+    },
+    "warning": {
+      "DEFAULT": "#F59E0B",
+      "foreground": "#FFFFFF"
+    },
+    "info": {
+      "DEFAULT": "#3B82F6",
+      "foreground": "#FFFFFF"
+    },
+    "border": "#333333",
+    "input": "#222222",
+    "ring": "#00BFFF"
+  },
+  "typography": {
+    "font_family_headings": ["Montserrat", "Space Grotesk", "sans-serif"],
+    "font_family_body": ["Inter", "sans-serif"],
+    "font_family_mono": ["JetBrains Mono", "monospace"],
+    "font_weight": {
+      "light": "300",
+      "normal": "400",
+      "medium": "500",
+      "semibold": "600",
+      "bold": "700",
+      "extrabold": "800"
+    },
+    "font_size": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "4rem"
+    },
+    "line_height": {
+      "tight": "1.1",
+      "normal": "1.5",
+      "relaxed": "1.75"
+    }
+  },
+  "ui": {
+    "border_radius": {
+      "none": "0",
+      "sm": "4px",
+      "DEFAULT": "8px",
+      "md": "12px",
+      "lg": "16px",
+      "xl": "24px",
+      "full": "9999px"
+    },
+    "spacing_base_unit": "4px",
+    "shadows": {
+      "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+      "DEFAULT": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "md": "0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3)",
+      "lg": "0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5)",
+      "glow": "0 0 20px rgba(0, 191, 255, 0.4)"
+    },
+    "transitions": {
+      "duration_fast": "150ms",
+      "duration_default": "300ms",
+      "duration_slow": "600ms",
+      "easing": "cubic-bezier(0.25, 0.1, 0.25, 1)"
+    }
+  },
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  }
+}
