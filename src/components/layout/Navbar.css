@@ -49,6 +49,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   position: relative;
+  color: #ffffff;
 }
 
 .nav-item:after {
@@ -137,11 +138,14 @@
     font-size: 1.8rem;
     font-weight: 800;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: #ffffff;
     letter-spacing: 2px;
   }
 
   .mobile-nav-item.active {
-    color: var(--color-primary);
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
   }
 }
