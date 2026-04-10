@@ -101,11 +101,11 @@
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  background: rgba(0, 0, 0, 0.98); /* Near-opaque for absolute clarity */
+  backdrop-filter: blur(40px); /* Massive blur for immersion */
+  -webkit-backdrop-filter: blur(40px);
   transition: all var(--transition-default);
-  z-index: 999;
+  z-index: 1001; /* Above the navbar base */
 }
 
 .mobile-menu.open {
