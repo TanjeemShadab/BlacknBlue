@@ -35,7 +35,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${isScrolled ? 'scrolled' : ''} glass`}>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <Link to="/" className="logo" onClick={scrollToTop}>
           <img src={logo} alt="Black n Blue Events" className="nav-logo" />
