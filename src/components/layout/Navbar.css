@@ -113,6 +113,10 @@
 @media (max-width: 992px) {
   .navbar {
     padding: 1.2rem 0;
+    background: #000000; /* Solid black for mobile as requested */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: 1px solid var(--glass-border);
   }
   
   .nav-links {
