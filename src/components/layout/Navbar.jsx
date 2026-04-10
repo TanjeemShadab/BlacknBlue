@@ -64,7 +64,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''} glass`}>
+      <div className={`mobile-menu ${mobileMenuOpen ? 'open' : ''}`}>
         {navLinks.map((link) => (
           <Link
             key={link.name}
