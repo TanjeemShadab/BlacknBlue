@@ -16,8 +16,8 @@
 @media (min-width: 993px) {
   .navbar:not(.scrolled) {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(80px);
+    -webkit-backdrop-filter: blur(80px);
     border-bottom: 1px solid var(--glass-border);
   }
 }
