@@ -3,6 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
+import logo from '../../assets/logo.png';
+
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,13 +26,20 @@ const Navbar = () => {
     { name: 'Contact', path: '/contact' },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''} glass`}>
       <div className="container nav-container">
-        <Link to="/" className="logo">
-          <span className="text-black">BLACK</span>
-          <span className="text-blue">n</span>
-          <span className="text-blue">BLUE</span>
+        <Link to="/" className="logo" onClick={scrollToTop}>
+          <img src={logo} alt="Black n Blue Events" className="nav-logo" />
+          <span className="logo-text">Black n Blue</span>
         </Link>
 
         {/* Desktop Menu */}
@@ -40,6 +49,7 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               className={`nav-item ${location.pathname === link.path ? 'active' : ''}`}
+              onClick={link.path === '/' ? scrollToTop : () => setMobileMenuOpen(false)}
             >
               {link.name}
             </Link>
@@ -59,7 +69,7 @@ const Navbar = () => {
           <Link
             key={link.name}
             to={link.path}
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={link.path === '/' ? scrollToTop : () => setMobileMenuOpen(false)}
             className={`mobile-nav-item ${location.pathname === link.path ? 'active' : ''}`}
           >
             {link.name}

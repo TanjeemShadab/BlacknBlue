@@ -1,25 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* Colors */
-  --color-primary: #00BFFF;
-  --color-primary-hover: #009ACD;
-  --color-secondary: #00001A;
-  --color-bg: #000000;
+  /* Colors - Premium Dark Mode */
+  --color-primary: #00BFFF; /* Electric Blue */
+  --color-primary-glow: rgba(0, 191, 255, 0.4);
+  --color-primary-hover: #00E5FF;
+  --color-secondary: #00001A; /* Deep Midnight */
+  --color-bg: #000000; /* OLED Black */
+  --color-surface: #0A0A0A;
+  --color-surface-hover: #121212;
   --color-text: #FFFFFF;
   --color-text-muted: #A1A1AA;
-  --color-border: #333333;
+  --color-border: rgba(255, 255, 255, 0.1);
   
   /* Typography */
   --font-headings: 'Montserrat', 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   
-  /* UI */
+  /* UI Tokens */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 16px;
-  --transition-default: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  --shadow-glow: 0 0 20px rgba(0, 191, 255, 0.3);
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-default: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --shadow-glow: 0 0 30px var(--color-primary-glow);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 /* Reset */
@@ -35,6 +41,7 @@ html, body {
   font-family: var(--font-body);
   overflow-x: hidden;
   line-height: 1.5;
+  scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,17 +72,11 @@ img {
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 5vw, 4rem);
 }
 
 .section-padding {
-  padding: 100px 0;
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 60px 0;
-  }
+  padding: clamp(60px, 10vw, 120px) 0;
 }
 
 /* Responsive Font Sizes */
@@ -83,13 +84,33 @@ h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1; }
 h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2; }
 h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
-/* Glassmorphism utility */
+/* Glassmorphism utility with enhanced depth */
 .glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
+
+.glass-hover:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--color-primary-glow);
+  box-shadow: 0 8px 32px 0 rgba(0, 191, 255, 0.1);
+}
+
+.text-blue {
+  color: var(--color-primary);
+  text-shadow: 0 0 15px var(--color-primary-glow);
+}
+
+.mt-8 { margin-top: 2rem; }
+.mt-auto { margin-top: auto; }
+.mb-8 { margin-bottom: 2rem; }
+.mb-12 { margin-bottom: 3rem; }
+.mr-2 { margin-right: 0.5rem; }
+.text-center { text-align: center; }
+.w-full { width: 100%; }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -107,4 +128,19 @@ h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-primary);
+}
+/* Brand Components */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-text {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  text-transform: uppercase;
 }
