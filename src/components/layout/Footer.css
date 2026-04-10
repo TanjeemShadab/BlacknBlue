@@ -150,11 +150,29 @@
 
 @media (max-width: 600px) {
   .footer-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
+  
+  .footer-brand {
+    grid-column: span 2;
+    text-align: center;
+    border-bottom: 1px solid var(--glass-border);
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-brand .footer-desc {
+    max-width: 100%;
+  }
+
   .footer-bottom-flex {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+  
+  .footer-links h3, .footer-contact h3 {
+    margin-bottom: 1.5rem;
   }
 }
